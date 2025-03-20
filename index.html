@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Course Sign-Up</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>AI Course Sign-Up</h2>
+    <img src="ai.jpg" alt="AI Course" >
+    <form >
+
+        <!-- Basic Information -->
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone">
+
+        <!-- Course Preferences -->
+        <label for="level">Level of AI Knowledge:</label>
+        <select id="level" name="level" required>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+        </select>
+
+        <label>Preferred Learning Mode:</label>
+        <div class="radio-group">
+            <input type="radio" id="online" name="learning_mode" value="Online" required>
+            <label for="online">Online</label>
+            <input type="radio" id="in-person" name="learning_mode" value="In-person">
+            <label for="in-person">In-person</label>
+            <input type="radio" id="hybrid" name="learning_mode" value="Hybrid">
+            <label for="hybrid">Hybrid</label>
+        </div>
+
+        <label>Topics of Interest:</label>
+        <div class="checkbox-group">
+            <input type="checkbox" id="ml" name="topics[]" value="Machine Learning">
+            <label for="ml">Machine Learning</label><br>
+            <input type="checkbox" id="dl" name="topics[]" value="Deep Learning">
+            <label for="dl">Deep Learning</label><br>
+            <input type="checkbox" id="nlp" name="topics[]" value="NLP">
+            <label for="nlp">Natural Language Processing</label><br>
+            <input type="checkbox" id="cv" name="topics[]" value="Computer Vision">
+            <label for="cv">Computer Vision</label><br>
+            <input type="checkbox" id="ethics" name="topics[]" value="AI Ethics">
+            <label for="ethics">AI Ethics</label>
+        </div>
+
+        <!-- Additional Information -->
+        <label for="reason">Why do you want to join this course?</label>
+        <textarea id="reason" name="reason" rows="3" required></textarea>
+
+        <label>Do you have prior experience with AI or programming?</label>
+        <div class="radio-group">
+            <input type="radio" id="yes" name="experience" value="Yes" required>
+            <label for="yes">Yes</label>
+            <input type="radio" id="no" name="experience" value="No">
+            <label for="no">No</label>
+        </div>
+        <input type="text" name="experience_details" placeholder="If yes, briefly explain">
+
+        <label for="start_date">Preferred Course Start Date:</label>
+        <input type="date" id="start_date" name="start_date" required>
+
+        <!-- Agreement & Submission -->
+        <div class="checkbox-group">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the <a href="#">Terms & Conditions</a></label>
+        </div>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+</body>
+</html>
